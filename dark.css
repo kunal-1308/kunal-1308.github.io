@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+}
+.btn.btn-social-icon {
+  font-size: 30px;
+  color: #292929;
+}
+.day {
+  font-size: 30px;
+}
+.btn.btn-social-icon:hover {
+  color: tomato;
+  transform: scale(1.1);
+}
+#contactme {
+  background-color: grey;
+  color: white;
+}
+body {
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+  color: #c7c7c7;
+}
+
+.fixed-bg {
+  background-image: url("./javelin.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-blend-mode: multiply;
+  color: white;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+.headi {
+  padding-top: 80px;
+}
+.pd {
+  padding: 50px;
+}
+.container-fluid {
+  border-radius: 10px;
+}
+.thumbnail {
+  padding: 0 0 10px 0;
+  border: none;
+  border-radius: 0;
+}
+.thumbnail img {
+  width: 60%;
+  height: 60%;
+  margin-bottom: 10px;
+}
+img:hover {
+  box-shadow: 5px 0px 40px rgba(0, 0, 0, 0.2);
+}
+
+#red {
+  color: red;
+}
