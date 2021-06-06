@@ -19,6 +19,9 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
 }
+h4{
+color : #fff;
+}
 #root {
     font-family: Montserrat light;
     width: 50%;
