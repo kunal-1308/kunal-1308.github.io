@@ -1,0 +1,8 @@
+.btn.btn-social-icon{
+    font-size: 30px;
+  }
+  
+  .btn.btn-social-icon:hover{
+    color: tomato;
+    transform: scale(1.5);
+  }
