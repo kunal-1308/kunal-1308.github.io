@@ -1,10 +1,11 @@
 import React from "react";
 
 function Me(){
+    const name = "< Kunal Bhapkar />"
     return(
         <div className="mt-5 container-fluid">
-               <div className="jumbotron row align-items-center justify-content-center"> 
-                <h1>Kunal Bhapkar</h1>
+               <div className="jumbotron row align-items-center justify-content-center">
+                <h1>{name}</h1>
                </div>
 
                <hr className="p-2"/>
@@ -23,13 +24,13 @@ function Me(){
                     </div>
                     <div className="col-sm-4">
                         <h4>Software Engineer</h4>
-                    </div>                   
+                    </div>
                     <div className="col-sm-4">
                         <h4>MERN stack Developer</h4>
                     </div>
                 </div>
             </div>
-        
+
     );
 }
 export default Me;
