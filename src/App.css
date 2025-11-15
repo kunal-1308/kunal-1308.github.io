@@ -1,4 +1,54 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
+/* Set a new-gen, minimalistic font family for the whole webpage */
+body,
+html {
+	font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	background: #fff;
+	color: #222;
+}
+
+/* For headings, use a slightly bolder and modern look */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+/* Wobble animation for Me.js */
+.wobble-animation {
+	display: inline-block;
+	animation: wobble 1.2s infinite;
+}
+@keyframes wobble {
+	0% {
+		transform: rotate(0deg);
+	}
+	15% {
+		transform: rotate(-5deg) scale(1.05);
+	}
+	30% {
+		transform: rotate(5deg) scale(0.95);
+	}
+	45% {
+		transform: rotate(-3deg) scale(1.02);
+	}
+	60% {
+		transform: rotate(3deg) scale(0.98);
+	}
+	75% {
+		transform: rotate(-2deg) scale(1.01);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
