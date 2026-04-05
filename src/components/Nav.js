@@ -13,7 +13,7 @@ function Nav() {
 
 	return (
 		<div>
-			<nav className="navbar navbar-expand-lg navbar-light bg-light">
+			<nav className="navbar navbar-expand-lg navbar-light bg-dark">
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -27,22 +27,22 @@ function Nav() {
 				<div className={`collapse navbar-collapse${collapsed ? "" : " show"}`} id="navbarSupportedContent">
 					<ul className="navbar-nav mr-auto p-2 m-3">
 						<li className="nav-item ml-2 mr-2">
-							<button className="btn btn-light" onClick={() => setActive("me")}>
+							<button className="btn btn-dark" onClick={() => setActive("me")}>
 								Me<span className="sr-only">(current)</span>
 							</button>
 						</li>
 						<li className="nav-item ml-2 mr-2">
-							<button className="btn btn-light" onClick={() => setActive("interests")}>
+							<button className="btn btn-dark" onClick={() => setActive("interests")}>
 								Interests
 							</button>
 						</li>
 						<li className="nav-item ml-2 mr-2">
-							<button className="btn btn-light" onClick={() => setActive("certifications")}>
+							<button className="btn btn-dark" onClick={() => setActive("certifications")}>
 								Certifications
 							</button>
 						</li>
 						<li className="nav-item ml-2 mr-2">
-							<button className="btn btn-light" onClick={() => setActive("contact")}>
+							<button className="btn btn-dark" onClick={() => setActive("contact")}>
 								Contact
 							</button>
 						</li>

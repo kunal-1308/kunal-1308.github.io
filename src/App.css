@@ -1,32 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+
 .App {
 	text-align: center;
 }
 
-/* Set a new-gen, minimalistic font family for the whole webpage */
-body,
-html {
-	font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-	font-weight: 400;
-	letter-spacing: 0.01em;
-	background: #fff;
-	color: #222;
+:root {
+	--font-heading: "Playfair Display", serif;
+	--font-body: "Inter", sans-serif;
+	--text-primary: #f8f9fa;
+	--text-muted: #b0bec5;
+
+	/* NEW: A striking teal accent color and a softer glow version */
+	--accent: #64ffda;
+	--accent-glow: rgba(100, 255, 218, 0.25);
 }
 
-/* For headings, use a slightly bolder and modern look */
+/* --- THE MAIN BACKGROUND --- */
+body,
+html {
+	font-family: var(--font-body);
+	color: var(--text-primary);
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+	background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+	background-attachment: fixed;
+}
+
+/* --- 1. NAVBAR OVERRIDES --- */
+/* Target the Bootstrap bg-dark class directly */
+.navbar.bg-dark {
+	background: rgba(15, 32, 39, 0.7) !important; /* Semi-transparent */
+	backdrop-filter: blur(12px); /* Creates the frosted glass effect */
+	-webkit-backdrop-filter: blur(12px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Override the dark buttons inside the nav */
+.navbar .btn-dark {
+	background-color: transparent !important;
+	border: none !important;
+	color: var(--text-primary) !important;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	position: relative;
+	transition: color 0.3s ease;
+	padding-bottom: 4px; /* Room for the underline */
+}
+
+/* Accent hover effect for the buttons */
+.navbar .btn-dark:hover,
+.navbar .btn-dark:focus {
+	color: var(--accent) !important;
+	box-shadow: none !important; /* Removes Bootstrap's default focus ring */
+}
+
+/* Animated accent underline for nav links */
+.navbar .btn-dark::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 50%;
+	background-color: var(--accent);
+	transition: all 0.3s ease;
+	transform: translateX(-50%);
+	box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.navbar .btn-dark:hover::after {
+	width: 80%;
+}
+
+/* Forces the mobile hamburger menu icon to be white */
+.navbar-toggler-icon {
+	filter: invert(1);
+}
+.navbar-toggler {
+	border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* --- 2. JUMBOTRON OVERRIDES --- */
+.jumbotron {
+	/* Turns the jumbotron into a frosted glass card */
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-top: 1px solid rgba(255, 255, 255, 0.15); /* Adds a subtle top light-catch */
+	border-left: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 24px; /* Rounds the harsh Bootstrap corners */
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+	color: var(--text-primary) !important;
+	padding: 6rem 3rem;
+	margin: 2rem; /* Keeps it away from the edges of the screen */
+	position: relative;
+	overflow: hidden;
+}
+
+/* Adds a very subtle accent glow in the top-left corner of the jumbotron */
+.jumbotron::before {
+	content: "";
+	position: absolute;
+	top: -50px;
+	left: -50px;
+	width: 200px;
+	height: 200px;
+	background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+	z-index: -1;
+}
+
+/* --- HEADINGS & TYPOGRAPHY --- */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+	font-family: var(--font-heading);
 	font-weight: 600;
-	letter-spacing: 0.02em;
+	letter-spacing: -0.02em;
+	color: #ffffff;
 }
 
+/* Make the typewriter cursor pop with the accent color */
 .typewriter-cursor {
 	font-weight: bold;
-	color: currentColor; /* Matches the text color of your h1 */
+	color: var(--accent);
+	text-shadow: 0 0 10px var(--accent-glow);
 	animation: blink 1s step-end infinite;
 }
 
