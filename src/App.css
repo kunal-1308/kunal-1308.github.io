@@ -24,31 +24,18 @@ h6 {
 	letter-spacing: 0.02em;
 }
 
-/* Wobble animation for Me.js */
-.wobble-animation {
-	display: inline-block;
-	animation: wobble 1.2s infinite;
+.typewriter-cursor {
+	font-weight: bold;
+	color: currentColor; /* Matches the text color of your h1 */
+	animation: blink 1s step-end infinite;
 }
-@keyframes wobble {
-	0% {
-		transform: rotate(0deg);
-	}
-	15% {
-		transform: rotate(-5deg) scale(1.05);
-	}
-	30% {
-		transform: rotate(5deg) scale(0.95);
-	}
-	45% {
-		transform: rotate(-3deg) scale(1.02);
-	}
-	60% {
-		transform: rotate(3deg) scale(0.98);
-	}
-	75% {
-		transform: rotate(-2deg) scale(1.01);
-	}
+
+@keyframes blink {
+	0%,
 	100% {
-		transform: rotate(0deg);
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
 	}
 }
